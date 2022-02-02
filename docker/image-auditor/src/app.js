@@ -16,8 +16,7 @@ const INTERVAL = 5000;
 const tcpServer = new net.Server();
 const udpServer = udp.createSocket('udp4');
 
-const instruments = protocol.INSTRUMENTS;
-var activeMusicians = new Map();
+const activeMusicians = new Map();
 
 udpServer.bind(protocol.PORT, () => {
     console.log('Subscribing to multicast group...');
