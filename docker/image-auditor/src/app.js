@@ -10,7 +10,6 @@ the list of active musicians, with the following format (it can be a single line
 const net = require('net');
 const udp = require('dgram');
 const protocol = require('./protocol');
-const {INSTRUMENTS} = require("./protocol");
 const tcpServer = new net.Server();
 const udpServer = udp.createSocket('udp4');
 
