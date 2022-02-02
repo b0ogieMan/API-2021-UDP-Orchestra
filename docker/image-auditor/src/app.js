@@ -31,7 +31,7 @@ udpServer.on('message', function(msg, source) {
 
     // create new json object and add time property
     const musician = {
-        obj,
+        ...obj,
         lastActive: Date.now(),
     };
 
@@ -72,6 +72,7 @@ tcpServer.on('connection', function(socket) {
             "activeSince": new Date(musician.activeSince)
         }));
 
+   console.log(activeMusicians);
     socket.write(JSON.stringify(lastActive));
     socket.end();
 });
