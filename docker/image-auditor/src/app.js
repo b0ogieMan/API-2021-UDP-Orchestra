@@ -1,12 +1,3 @@
-// TCP SERVER
-
-
-/* The auditor should include a TCP server and accept connection requests on
- port 2205.
-After accepting a connection request, the auditor must send a JSON payload containing
-the list of active musicians, with the following format (it can be a single line, without indentation):
- */
-
 const net = require('net');
 const udp = require('dgram');
 const protocol = require('./protocol');
