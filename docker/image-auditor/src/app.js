@@ -40,7 +40,7 @@ udpServer.on('message', function(msg, source) {
         .find((instrument) => protocol.INSTRUMENTS[instrument] === musician.sound);
 
     // if in the map 
-    if (activeMusicians.has(data.uuid)) {
+    if (activeMusicians.has(musician.uuid)) {
         musician.activeSince = activeMusicians.get(musician.uuid).activeSince; // no
         // need to update activeSince
     } else {
